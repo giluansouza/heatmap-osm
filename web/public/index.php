@@ -37,6 +37,7 @@ $foo = new App\Acme\Foo();
             const res = await fetch("dados.json");
             const data = await res.json();
             console.log(data);
+            console.log(data);
 
             var map = L.map('map').setView([-37.87, 175.475], 12);
 
