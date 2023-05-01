@@ -172,33 +172,12 @@ If you modify the host name, do not forget to add it to the `/etc/hosts` file.
 
 ___
 
-## Configure Xdebug
-
-If you use another IDE than [PHPStorm](https://www.jetbrains.com/phpstorm/) or [Netbeans](https://netbeans.org/), go to the [remote debugging](https://xdebug.org/docs/remote) section of Xdebug documentation.
-
-For a better integration of Docker to PHPStorm, use the [documentation](https://github.com/nanoninja/docker-nginx-php-mysql/blob/master/doc/phpstorm-macosx.md).
-
-1. Get your own local IP address :
-
-    ```sh
-    sudo ifconfig
-    ```
-
-2. Edit php file `etc/php/php.ini` and comment or uncomment the configuration as needed.
-
-3. Set the `remote_host` parameter with your IP :
-
-    ```sh
-    xdebug.remote_host=192.168.0.1 # your IP
-    ```
-___
-
 ## Run the application
 
 1. Copying the composer configuration file : 
 
     ```sh
-    cp web/app/composer.json.dist web/app/composer.json
+    cp webapp/composer.json.dist webapp/composer.json
     ```
 
 2. Start the application :
