@@ -151,7 +151,7 @@ If you modify the host name, do not forget to add it to the `/etc/hosts` file.
 1. Generate SSL certificates
 
     ```sh
-    source .env && docker run --rm -v $(pwd)/etc/ssl:/certificates -e "SERVER=$NGINX_HOST" jacoelho/generate-certificate
+    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout etc/ssl/nginx.key -out etc/ssl/nginx.crt
     ```
 
 2. Configure Nginx
